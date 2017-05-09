@@ -10,7 +10,7 @@
            url:'/app',
             views:{
                 home:{
-                    template:'首页'
+                    templateUrl:'../view/home_tpl.html'
                 },
                 author:{
                     template:"作者"
@@ -23,6 +23,7 @@
                 }
             }
         });
+        /*设置默认跳转。*/
         $urlRouterProvider.otherwise('/app');
     }]);
 
