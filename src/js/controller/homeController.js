@@ -3,18 +3,16 @@
  */
 (function (angular) {
     "use strict";
-    angular.module('app').controller('homeController',['$scope','$http',function ($scope,$http) {
+    angular.module('app').controller('homeController',['$scope','xmgHttp',function ($scope,xmgHttp) {
 
         console.log('homeController');
         /*请求数据*/
-        $http({
-            url:'http://localhost/api/home.php',
-            method:'jsonp'//必须得要使用jsonp
-        }).then(function (res) {
-           console.log(res.data);
-        }).catch(function (err) {
+       xmgHttp.getData(function (data) {
+           console.log(data);
+           $scope.data = data;
+       },function (error) {
 
-        });
+       });
 
     }]);
 })(angular);
