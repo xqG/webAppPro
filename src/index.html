@@ -18,6 +18,15 @@ font-size=100px
 <!--导航-->
 <nav></nav>
 
+<!--首页-->
+<div ng-show="type == 'home'" ui-view="home"></div>
+<!--作者-->
+<div ng-show="type == 'author'" ui-view="author"></div>
+<!--栏目-->
+<div ng-show="type == 'content'" ui-view="content"></div>
+<!--我的-->
+<div ng-show="type == 'my'" ui-view="my"></div>
+
 <!--底部标签切换-->
 <tabbar></tabbar>
 

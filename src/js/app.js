@@ -3,8 +3,8 @@
  */
 (function (angular) {
     "use strict";
-    /*创建模块*/
-   var app =  angular.module('app',[]);
+    /*创建模块 注入路由*/
+   var app =  angular.module('app',['ui.router']);
     /*创建控制器  行内式注入*/
     app.controller('appController',['$scope',function ($scope) {
         $scope.name =　"今日一刻";
