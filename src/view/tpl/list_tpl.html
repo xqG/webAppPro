@@ -1,17 +1,18 @@
 <div class="list" ng-repeat="item in  listItem">
-    <p class="tag">洗洗睡</p>
-    <h3>洗洗睡标题。。。。</h3>
+    <p class="tag" ng-bind="item.column.name"></p>
+    <h3 ng-bind="item.title"></h3>
     <!--只有文字-->
-    <div class="content1">
-        <p>洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标标题洗洗睡标题</p>
+    <div class="content1" ng-if="item.display_style == '10001'">
+        <p ng-bind="item.abstract"></p>
     </div>
     <!--文字，图片-->
-    <div class="content2">
-        <p>洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标题洗洗睡标标题</p>
-        <img src="images/post_1.png" alt="">
+    <div class="content2" ng-if="item.display_style == '10002'">
+        <p ng-bind="item.abstract"></p>
+        <img ng-src="images/post_1.png" alt="">
     </div>
+
     <!--三张图片-->
-    <div class="content3">
+    <div class="content3" ng-if="item.display_style == '10003'">
         <ul>
             <li><img src="images/post_3.png" alt=""></li>
             <li><img src="images/post_3.png" alt=""></li>
