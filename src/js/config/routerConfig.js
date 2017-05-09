@@ -28,4 +28,27 @@
         $urlRouterProvider.otherwise('/app');
     }]);
 
+    angular.module('app').config(['$stateProvider',function ($stateProvider) {
+        //配置主路由
+        $stateProvider.state('app.index',{
+            url:'/index',
+            template:'<list list-item="data.posts"></list>'
+        });
+
+    }]);
+
+    angular.module('app').config(['$stateProvider',function ($stateProvider) {
+        //配置主路由
+        $stateProvider.state('app.detail',{
+            url:'/detail/:id',
+            template:'<div><detail content="{{content}}"></detail></div>',
+            controller:'detailController'
+        });
+
+    }]);
+
+
+
+
+
 })(angular);

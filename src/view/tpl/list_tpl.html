@@ -1,10 +1,11 @@
-<div class="list" ng-repeat="item in  listItem">
+<div class="list" ng-repeat="(key,item) in  listItem" ui-sref="app.detail({id:key})">
     <p class="tag" ng-bind="item.column.name"></p>
     <h3 ng-bind="item.title"></h3>
     <!--只有文字-->
     <div class="content1" ng-if="item.display_style == '10001'">
         <p ng-bind="item.abstract"></p>
     </div>
+
     <!--文字，图片-->
     <div class="content2" ng-if="item.display_style == '10002'">
         <p ng-bind="item.abstract"></p>
