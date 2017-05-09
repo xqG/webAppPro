@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+font-size=100px
+
+ rem单位根据html字体大小计算出的一个单位。会有一个默认缩放比取值10
+ 100px/10 = 1rem;
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--设置视口 当前项目是运行到手机端-->
+    <meta name="viewport" content="width=device-width maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+aaabbbccc123456
+
+</body>
+
+<!--设置页面默认字体大小-->
+<script>
+    var font = window.screen.width / 10 + 'px';
+    document.getElementsByTagName('html')[0].style.fontSize = font;
+</script>
+
+<script src="js/index.js"></script>
+</html>
