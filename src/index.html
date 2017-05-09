@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!--
 font-size=100px
-
  rem单位根据html字体大小计算出的一个单位。会有一个默认缩放比取值10
  100px/10 = 1rem;
  -->
-<html lang="en">
-<head>
+<html lang="en" ng-app="app" ng-controller="appController">
+<head >
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title ng-bind="name"></title>
     <!--设置视口 当前项目是运行到手机端-->
     <meta name="viewport" content="width=device-width maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
@@ -27,5 +26,6 @@ aaabbbccc123456
 </script>
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+
 <script src="js/index.js"></script>
 </html>
